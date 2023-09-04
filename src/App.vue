@@ -1,17 +1,12 @@
 <template>
-    <div></div>
+    <TheCalculator />
 </template>
 
 <script>
+import TheCalculator from './components/TheCalculator.vue';
 export default {
-    data() {
-        return {};
+    components: {
+        TheCalculator,
     },
-
-    mounted() {},
-
-    methods: {},
 };
 </script>
-
-<style lang="scss" scoped></style>
