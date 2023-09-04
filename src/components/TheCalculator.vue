@@ -83,7 +83,7 @@
 <script>
 import BaseButton from './BaseButton.vue';
 import BaseIcon from './BaseIcon.vue';
-import IconBackspace from './icons/iconBackspace.vue';
+import IconBackspace from './icons/IconBackspace.vue';
 import IconDivide from './icons/IconDivide.vue';
 import IconMinus from './icons/IconMinus.vue';
 import IconMultiply from './icons/IconMultiply.vue';
