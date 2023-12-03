@@ -1,12 +1,7 @@
 <template>
-    <TheCalculator />
+  <Calculator class="h-screen w-full p-[20px]" />
 </template>
 
-<script>
-import TheCalculator from './components/TheCalculator.vue';
-export default {
-    components: {
-        TheCalculator,
-    },
-};
+<script setup>
+import Calculator from './page/CalculatorPage.vue';
 </script>

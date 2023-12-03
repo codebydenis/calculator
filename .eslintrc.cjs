@@ -1,68 +1,64 @@
 module.exports = {
-    env: {
-        browser: true,
-        es2021: true,
+  env: {
+    browser: true,
+    es2021: true,
+  },
+  extends: ['plugin:vue/vue3-strongly-recommended', 'eslint:recommended', 'plugin:prettier/recommended'],
+  overrides: [
+    {
+      env: {
+        node: true,
+      },
+      files: ['.eslintrc.{js,cjs}'],
+      parserOptions: {
+        sourceType: 'script',
+      },
     },
-    extends: [
-        'plugin:vue/vue3-strongly-recommended',
-        'eslint:recommended',
-        'plugin:prettier/recommended',
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleAttributePerLine: true,
+        tabWidth: 2,
+        endOfLine: 'auto',
+        singleQuote: true,
+      },
     ],
-    overrides: [
-        {
-            env: {
-                node: true,
-            },
-            files: ['.eslintrc.{js,cjs}'],
-            parserOptions: {
-                sourceType: 'script',
-            },
+    'no-console': 'warn',
+    'no-debugger': 'warn',
+    'vue/attributes-order': [
+      'error',
+      {
+        order: [
+          'DEFINITION',
+          'LIST_RENDERING',
+          'CONDITIONALS',
+          'RENDER_MODIFIERS',
+          'GLOBAL',
+          ['UNIQUE', 'SLOT'],
+          'TWO_WAY_BINDING',
+          'OTHER_DIRECTIVES',
+          'OTHER_ATTR',
+          'EVENTS',
+          'CONTENT',
+        ],
+        alphabetical: false,
+      },
+    ],
+    'vue/max-attributes-per-line': [
+      'error',
+      {
+        singleline: {
+          max: 1,
         },
+        multiline: {
+          max: 1,
+        },
+      },
     ],
-    parserOptions: {
-        ecmaVersion: 'latest',
-    },
-    rules: {
-        'prettier/prettier': [
-            'error',
-            {
-                singleAttributePerLine: true,
-                tabWidth: 4,
-                endOfLine: 'auto',
-                singleQuote: true,
-            },
-        ],
-        'no-console': 'warn',
-        'no-debugger': 'warn',
-        'vue/attributes-order': [
-            'error',
-            {
-                order: [
-                    'DEFINITION',
-                    'LIST_RENDERING',
-                    'CONDITIONALS',
-                    'RENDER_MODIFIERS',
-                    'GLOBAL',
-                    ['UNIQUE', 'SLOT'],
-                    'TWO_WAY_BINDING',
-                    'OTHER_DIRECTIVES',
-                    'OTHER_ATTR',
-                    'EVENTS',
-                    'CONTENT',
-                ],
-                alphabetical: false,
-            },
-        ],
-        'vue/max-attributes-per-line': [
-            'error',
-            {
-                singleline: {
-                    max: 1,
-                },
-                multiline: {
-                    max: 1,
-                },
-            },
-        ],
-    },
+  },
 };
